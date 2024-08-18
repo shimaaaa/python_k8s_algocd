@@ -12,6 +12,6 @@ spec:
     - helm:
         valueFiles:
           - values.yaml
-      path: helmChart/apps/myapp
+      path: helmChart/apps
       repoURL: https://github.com/shimaaaa/python_k8s_algocd.git
       targetRevision: main
