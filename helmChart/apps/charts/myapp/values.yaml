@@ -1,0 +1,5 @@
+myapp:
+  containerPort: {{ .Values.myapp.containerPort }}
+  nodePort:  {{ .Values.myapp.nodePort }}
+  image:  {{ .Values.myapp.image }}
+  replicas:  {{ .Values.myapp.replicas }}
