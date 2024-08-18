@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apps
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+    - helm:
+        valueFiles:
+          - values.yaml
+      path: helmChart/apps/myapp
+      repoURL: https://github.com/shimaaaa/python_k8s_algocd
+      targetRevision: main
