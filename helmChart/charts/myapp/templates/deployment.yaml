@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  name: myapp
 spec:
-  replicas: {{ .Values.myApp.replicas }}
+  replicas: {{ .Values.myapp.replicas }}
   selector:
     matchLabels:
       app: myapp
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: {{ .Values.myApp.image }}
+        image: {{ .Values.myapp.image }}
         imagePullPolicy: Never
         ports:
-        - containerPort: {{ .Values.myApp.containerPort }}
+        - containerPort: {{ .Values.myapp.containerPort }}

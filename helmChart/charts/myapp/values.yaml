@@ -1,4 +1,4 @@
-myApp:
+myapp:
   containerPort: 8000
   nodePort: 30007
   image: myapp:latest
